@@ -24,7 +24,7 @@ function Triage() {
         };
 
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/patients/", {
+            const response = await fetch("https://hospitalqueuemanagement-zrja.onrender.com/api/patients/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -37,8 +37,6 @@ function Triage() {
 
             if (response.ok) {
                 alert("Patient saved ✅");
-
-                // clear inputs
                 setname("");
                 setage("");
                 setgender("");
